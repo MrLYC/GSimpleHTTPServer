@@ -58,6 +58,7 @@ target/
 *.tmp
 *.*~
 demo/resources/
+nohup.out
 
 # virtualenv
 GSimpleHTTPServer-venv/
