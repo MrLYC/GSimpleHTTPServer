@@ -16,7 +16,10 @@ def serve_forever(port):
     handler = SimpleHTTPServer.SimpleHTTPRequestHandler
     httpd = SocketServer.TCPServer(("", port), handler)
     print "[+] serving at port", port
-    httpd.serve_forever()
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print "[+] GSimpleHTTPServer exited"
 
 
 if __name__ == "__main__":
@@ -26,7 +29,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         port = int(sys.argv[1])
 
-    try:
-        serve_forever(port)
-    except KeyboardInterrupt:
-        print "[+] GSimpleHTTPServer exited"
+    serve_forever(port)

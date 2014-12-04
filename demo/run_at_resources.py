@@ -15,7 +15,4 @@ rootdir = path.join(selfpath, "resources")
 os.chdir(rootdir)
 print "[+] change directory to", rootdir
 
-try:
-    serve_forever(port)
-except KeyboardInterrupt:
-    print "[+] GSimpleHTTPServer exited"
+serve_forever(port)
