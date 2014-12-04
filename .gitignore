@@ -57,6 +57,7 @@ target/
 *.bak
 *.tmp
 *.*~
+demo/resources/
 
 # virtualenv
 GSimpleHTTPServer-venv/
